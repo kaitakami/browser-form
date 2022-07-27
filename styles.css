@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 600px;
+  min-width: 300px;
+  padding: 40px 5%;
+  border-radius: 8px;
+  background-color: #1b2731;
+  margin: 0 16px;
+}
+
+.message-display {
+  color: #f1f1f1;
+  display: block;
+  padding: 20px 10px;
+  border-radius: 12px;
+  margin-bottom: 4px;
+  background-color: #274157;
+  font-size: 0.8rem;
+  transition: all 100ms ease-in;
+}
+
+.error-display {
+  background-color: rgb(255, 104, 104);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.input:focus:invalid {
+  border-color: hsl(350, 100%, 78%);
+}
+
+.input:focus:valid {
+  border-color: rgb(16, 193, 25);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Form</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <span class="message-display"
+          >The password must contain at least one number and one uppercase and
+          lowercase letter, and at least 8 or more characters</span
+        >
+        <label>Email ✉️</label>
+        <input id="email-input" class="input" type="email" required />
+        <label>Country 🌎</label>
+        <input id="country-input" class="input" list="countries" required />
+        <label>Zip Code 📪</label>
+        <input
+          id="zip-input"
+          class="input"
+          type="text"
+          minlength="2"
+          pattern="[0-9]*"
+          required
+        />
+        <label>Password 🔒</label>
+        <input
+          id="password-input"
+          class="input"
+          type="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+        />
+        <label>Confirm Password</label>
+        <input
+          id="confirm-pass-input"
+          class="input"
+          type="password"
+          minlength="8"
+          required
+        />
+        <button id="submit-btn" type="submit">Create Account</button>
+      </form>
+    </div>
+
+    <datalist id="countries">
+      <option value="Mexico"></option>
+      <option value="United States"></option>
+      <option value="Canada"></option>
+      <option value="China"></option>
+      <option value="UK"></option>
+      <option value="Chile"></option>
+      <option value="Japan"></option>
+      <option value="Argentina"></option>
+      <option value="Spain"></option>
+      <option value="Guatemala"></option>
+    </datalist>
+    <script src="index.js"></script>
+  </body>
+</html>
